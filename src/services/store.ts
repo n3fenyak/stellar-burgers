@@ -11,13 +11,9 @@ import {
   userReducer,
   constructorReducer,
   orderReducer,
-<<<<<<< HEAD
-  profileOrdersReducer
-=======
   profileOrdersReducer,
   feedReducer,
   orderInfoReducer
->>>>>>> ccba09a (upd: устранены замечания)
 } from '@slices';
 
 const rootReducer = combineReducers({
@@ -25,13 +21,9 @@ const rootReducer = combineReducers({
   user: userReducer,
   burgerConstructor: constructorReducer,
   order: orderReducer,
-<<<<<<< HEAD
-  profileOrders: profileOrdersReducer
-=======
   profileOrders: profileOrdersReducer,
   feed: feedReducer,
   orderInfo: orderInfoReducer
->>>>>>> ccba09a (upd: устранены замечания)
 });
 
 const store = configureStore({

@@ -29,15 +29,6 @@ export const Profile: FC = () => {
   const handleSubmit = async (e: SyntheticEvent) => {
     e.preventDefault();
 
-<<<<<<< HEAD
-    dispatch(
-      updateUser({
-        name: formValue.name,
-        email: formValue.email,
-        password: formValue.password || undefined
-      })
-    );
-=======
     try {
       await dispatch(
         updateUser({
@@ -52,7 +43,6 @@ export const Profile: FC = () => {
         password: ''
       }));
     } catch {}
->>>>>>> ccba09a (upd: устранены замечания)
   };
 
   const handleCancel = (e: SyntheticEvent) => {

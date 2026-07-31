@@ -25,12 +25,7 @@ import {
 import { Preloader } from '@ui';
 
 import { useDispatch, useSelector } from '../../services/store';
-<<<<<<< HEAD
-import { fetchIngredients, getUser, authCheckComplete } from '@slices';
-import { getCookie } from '../../utils/cookie';
-=======
 import { fetchIngredients, getUser } from '@slices';
->>>>>>> ccba09a (upd: устранены замечания)
 
 const App = () => {
   const location = useLocation();
@@ -54,15 +49,7 @@ const App = () => {
   }, [dispatch]);
 
   useEffect(() => {
-<<<<<<< HEAD
-    if (getCookie('accessToken')) {
-      dispatch(getUser());
-    } else {
-      dispatch(authCheckComplete());
-    }
-=======
     dispatch(getUser());
->>>>>>> ccba09a (upd: устранены замечания)
   }, [dispatch]);
 
   return (

@@ -29,21 +29,12 @@ const initialState: TUserState = {
 export const registerUser = createAsyncThunk(
   'user/register',
   async (data: TRegisterData) => {
-<<<<<<< HEAD
     const response = await registerUserApi(data);
 
     localStorage.setItem('refreshToken', response.refreshToken);
     setCookie('accessToken', response.accessToken);
 
     return response.user;
-=======
-    await registerUserApi(data);
-
-    // localStorage.setItem('refreshToken', response.refreshToken);
-    // setCookie('accessToken', response.accessToken);
-
-    // return response.user;
->>>>>>> ccba09a (upd: устранены замечания)
   }
 );
 
@@ -92,13 +83,8 @@ const userSlice = createSlice({
       })
       .addCase(registerUser.fulfilled, (state, action) => {
         state.isLoading = false;
-<<<<<<< HEAD
         state.isAuthChecked = true;
         state.user = action.payload;
-=======
-        // state.isAuthChecked = true;
-        // state.user = action.payload;
->>>>>>> ccba09a (upd: устранены замечания)
       })
       .addCase(registerUser.rejected, (state, action) => {
         state.isLoading = false;
