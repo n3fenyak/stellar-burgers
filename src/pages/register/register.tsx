@@ -26,7 +26,11 @@ export const Register: FC = () => {
     )
       .unwrap()
       .then(() => {
+<<<<<<< HEAD
         navigate('/', { replace: true });
+=======
+        navigate('/login', { replace: true });
+>>>>>>> ccba09a (upd: устранены замечания)
       });
   };
 

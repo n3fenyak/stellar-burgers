@@ -21,3 +21,10 @@ export { default as orderReducer } from './order-slice';
 export { createOrder, clearOrderModalData } from './order-slice';
 export { default as profileOrdersReducer } from './profile-orders-slice';
 export { fetchProfileOrders } from './profile-orders-slice';
+<<<<<<< HEAD
+=======
+export { default as feedReducer } from './feed-slice';
+export { fetchFeeds } from './feed-slice';
+export { default as orderInfoReducer } from './order-info-slice';
+export { fetchOrderByNumber, clearOrderInfo } from './order-info-slice';
+>>>>>>> ccba09a (upd: устранены замечания)

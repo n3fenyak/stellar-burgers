@@ -26,9 +26,10 @@ export const Profile: FC = () => {
     formValue.email !== user?.email ||
     !!formValue.password;
 
-  const handleSubmit = (e: SyntheticEvent) => {
+  const handleSubmit = async (e: SyntheticEvent) => {
     e.preventDefault();
 
+<<<<<<< HEAD
     dispatch(
       updateUser({
         name: formValue.name,
@@ -36,6 +37,22 @@ export const Profile: FC = () => {
         password: formValue.password || undefined
       })
     );
+=======
+    try {
+      await dispatch(
+        updateUser({
+          name: formValue.name,
+          email: formValue.email,
+          password: formValue.password || undefined
+        })
+      ).unwrap();
+
+      setFormValue((prevState) => ({
+        ...prevState,
+        password: ''
+      }));
+    } catch {}
+>>>>>>> ccba09a (upd: устранены замечания)
   };
 
   const handleCancel = (e: SyntheticEvent) => {
